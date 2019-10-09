@@ -1,0 +1,122 @@
+//Objetivo: criar o jogo de cartas UNO usando os conceitos : Classe, Herança, Polimorfismo, encapsulamento
+
+/////////////////////// LEIAM ISSO AQUI:    ///////////////////////////////// 
+
+/*
+O jogo incialmente teriam as classes Mesa, Baralho Carta e Jogador.
+
+Usar o enum Cor para atribuir numeros as cores e facilitar a construção do jogo. 
+
+O jogador terá algumas ações:  colher cartas, descartar, dizer "UNO!" etc.
+
+
+Pensando em algumas situações de jogo resolvi colocar a classe Jogada que vai ser responsável por validar as jogaddas dos jogadores.
+
+A ideia da Classe Jogada foi para clarear as ações do jogador e ver se eram possiveis de serem executadas. 
+Exemplo: verificar se a carta que o jogador escolher pode ser descartada ou não para a mesa.
+
+A classe Mesa terá 2 atributos do tipo Baralho o Deck (o monte de cartas fora as distribuidas aos jogadores) e o descarte(o montade de
+cartas descartadas durante jogo)
+
+
+*/
+
+Classes: Mesa, Baralho, Jogador, Carta.
+
+enum Cor
+{
+        Amrelo,
+        Vermelho,
+        Verde,
+        Azul,
+        Coringa,
+};
+
+
+CLass Carta{
+    
+    Private:
+    
+    atributos Cor _cor;
+    atributos int numero;
+    atributo string acao;
+    
+    Public:
+    Carta(string cor, int numero, string acao);
+    
+    get_cor();
+    get_numero();
+    get_acao();
+    
+}
+
+Class Baralho{
+    
+    // lista: Remover ultimo usando List c++ pop_back
+   
+    Private:
+    atributo Carta _cartas[108];
+    
+    Public:
+    
+    Baralho(Carta *_cartas);
+    
+    //como inserir as cartas no Baralho
+    inserir_carta();
+    retirar_carta();
+    
+}
+
+//Possui um nome e uma mão de cartas
+//mostra as ações que o jogador pode fazer durante o jogo 
+
+Class Jogador{
+    
+    Private:
+    atributo string nome;
+    atributos Carta _mao[108];
+    atributo boolean uno; // essa variavel caso o  jogador tenha apenas uma carta(Uno)
+    
+    Public:
+    Jogador (String nome, Carta _mao, boolean uno)
+    
+    
+    get nome();
+    get_mao();
+    verificar _mao(); //retornar se o jogador esta com 1 Carta
+    gritar_uno(); //verificar a mao, e se tiver apenas uma carta, atribuir verdadeiro a variavel uno.
+    escolher_carta_mao(); //selecionar qual a carta que eu quero remover da minha mao
+}
+
+//as regras de uma jogada do jogador devem ser verificadas por essa classe . N remover carta na jogada e sim na mesa.
+Class Jogada{
+    Private:
+    atributo Carta _mao; //carta escolhida para ser jogada na mesa pelo jogador
+    atributo Carta _mesa; //ultima carta descartada na mesa
+    
+    Public:
+    //Essas acoes não removem cartas da mao do jogador nem do baralho de descarte
+    Jogada(Carta _mao, Carta _mesa); //pegar a carta escolhida pelo jogador, ela será a carta mao. Pegar ela com a ultima carta colocada no descarte, que sera a carta mesa.
+    jogada_possivel(); //compara se a carta que o jogador escolheu é possível de ir pra o descarte. Se for a carta mão vai pra carta mesa, senao, volta para a mao
+    conferir_uno(); // verifica  se tem uma carta na mao e se a variavel boolena uno é falsa. Se for, jogador terá de comer 2 cartas.
+}
+
+// onde ficará algumas ações e que vao modificar o deck: descartar,distribuir etc.
+Class Mesa {
+    
+    //obs: a carta flui do deck para a mao de um jogador e da mao para o descarte 
+    
+    Private:
+    atributo num_jogadores[2]
+    atributo Baralho deck; 
+    atributo Baralho descarte;
+    
+    Public:
+    
+    //preencher na mesa o atributo deck com as cartas do jogo.
+    preencher_deck(); //preencher o baralho deck no inicio do jogo e quando acaba o baralho deck
+    descartar_carta(); //poe a carta no descarte
+    distribuir_cartas(); //distribui 7 cartas para cada jogador
+    Mudar_cor;
+    
+}
