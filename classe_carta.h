@@ -1,7 +1,7 @@
 #ifndef Carta_h
 #define Carta_h
 
-CLass Carta{
+Class Carta{
     
     Private:
     Cor _cor;

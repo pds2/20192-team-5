@@ -1,6 +1,6 @@
 #include <iostream>
 
-CLass Carta{
+Class Carta{
     
     Private:
     Cor _cor;
