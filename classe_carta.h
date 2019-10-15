@@ -1,19 +1,17 @@
-#ifndef Carta_h
-#define Carta_h
+#ifndef CARTA_H
+#define CARTA_H
 
-Class Carta{
+class Carta{
     
-    Private:
-    Cor _cor;
-    int numero;
-    string acao;
+    private:
+        int cor;
+        int numero;
     
-    Public:
-    Carta(string cor, int numero, string acao);
+    public:
+        Carta(int _cor, int _numero);
+        int get_cor();    
+        int get_numero();
+        void acao();
     
-    Cor get_cor();    
-    int get_numero();
-    string get_acao();
-    
-}
+};
 #endif

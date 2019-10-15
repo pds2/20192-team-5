@@ -1,25 +1,19 @@
 #include <iostream>
+#include "classe_carta.h"
 
-Class Carta{
-    
-    Private:
-    Cor _cor;
-    int numero;
-    string acao;
-    
-    Public:
-    Carta(string cor, int numero, string acao);
-    
-    Cor get_cor(){
-    	return _cor;
+Carta::Carta(int _cor, int _numero){
+    this->cor = _cor;
+    this->numero = _numero;
+
+}
+
+int Carta::get_cor(){
+    	return this->cor;
     }   
 
-    int get_numero(){
-    	return numero;
+int Carta::get_numero(){
+    	return this->numero;
     }
 
-    string get_acao(){
-    	return acao;
-    }
+void Carta::acao(){;}
     
-}
