@@ -1,29 +1,25 @@
 #include <iostream>
+#include "Baralho_h"
 
-void criar_baralho(int *cartas){ //essa função cria um vetor de numeros aleatorios e depois deixa todos diferentes entre si
-    int i, j;
-	for(i=0; i<108; i++){
-		cartas[i] = rand()%108;
-	}
-	for(i=0; i<108; i++){
-		for(j=0; j<108; j++){
-			if(cartas[i]==cartas[j] && i!=j){
-				cartas[i] = rand()%108;
-				j = 0;
-				continue;
-			}	
-		}
-	}
-	for(i=0; i<108; i++){
-		std::cout << cartas[i] << " ";
-	}
-}
+class Baralho{
+    
+    private:
+    std::vector<Carta> cartas;
 
-// dar_cartas(){
+    public:
+    Baralho();
 
-// }
+    void Baralho::embaralhar (){
+    		
+    } 
 
-int main() {
-    int cartas[108];
-	criar_baralho(cartas);
-}
+    void Baralho::popular(){
+
+    }
+
+    //popular: criar 108 cartas e add ao baralho loops
+};  //http://www.cplusplus.com/reference/algorithm/random_shuffle/
+    //criar vetor vazio
+      	
+        
+#endif
