@@ -9,13 +9,14 @@
 class Baralho{
     
     private:
-    std::vector<std::Carta> cartas;
+    std::vector<Carta> cartas;
 
     public:
 
     Baralho();
 
     void embaralhar ();
+
     void popular(); 
 
     //popular: criar 108 cartas e add ao baralho loops

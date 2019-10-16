@@ -1,25 +1,26 @@
 #include <iostream>
-#include "Baralho_h"
+#include "baralho.h"
 
-class Baralho{
+Baralho::Baralho(){};
+
+void Baralho::embaralhar (){
+	std::random_shuffle(cartas.begin(), cartas.end());
     
-    private:
-    std::vector<Carta> cartas;
+ } 
 
-    public:
-    Baralho();
-
-    void Baralho::embaralhar (){
-    		
-    } 
-
-    void Baralho::popular(){
-
-    }
+void Baralho::popular(){
+//
+	for (int i = 0; i <= 9; i++){
+		for(int j = 0; j < 4; j++){
+			Carta aux(j,i);
+			cartas.push_back(aux); 
+		}
+	}
+    
+ }
 
     //popular: criar 108 cartas e add ao baralho loops
-};  //http://www.cplusplus.com/reference/algorithm/random_shuffle/
+  //http://www.cplusplus.com/reference/algorithm/random_shuffle/
     //criar vetor vazio
       	
         
-#endif
