@@ -1,12 +1,17 @@
-#include "classe_carta.h"
 #include <iostream>
+#include "baralho.h"
 
-int main () {
+using namespace std;
 
-    Carta teste(0, 2);
+int main(){
+		
+		Baralho baralho;
+		baralho.popular();
+		baralho.imprimir();
+		baralho.embaralhar();
+		baralho.imprimir();
 
-    std::cout<< "minha cor é " << teste.get_cor() << std::endl
-             << "meu número é " << teste.get_numero() << std::endl;
 
 
+	return 0;
 }
