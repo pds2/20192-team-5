@@ -16,8 +16,8 @@ class Baralho{
     Baralho();
 
     void embaralhar ();
-
-    void popular(); 
+    void popular();
+    void imprimir();
 
     //popular: criar 108 cartas e add ao baralho loops
 };  //http://www.cplusplus.com/reference/algorithm/random_shuffle/
