@@ -15,5 +15,5 @@ int Carta::get_numero(){
     	return this->numero;
     }
 
-void Carta::acao(){;}
+void Carta::acao(){}
     
