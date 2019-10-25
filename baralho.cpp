@@ -18,6 +18,10 @@ void Baralho::popular(){
 	}
     
  }
+std::vector<Carta> Baralho::retornarCarta(){
+	return this->cartas;
+}
+
 
 void Baralho::imprimir(){
  std::cout << "myvector contains:";

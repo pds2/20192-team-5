@@ -14,7 +14,7 @@ class Baralho{
     public:
 
     Baralho();
-
+    std::vector<Carta> retornarCarta();
     void embaralhar ();
     void popular();
     void imprimir();
