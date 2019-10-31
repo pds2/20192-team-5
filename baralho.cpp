@@ -18,6 +18,23 @@ void Baralho::popular(){
 	}
     
  }
+std::vector<Carta> Baralho::retornarCarta(){
+	return this->cartas;
+}
+
+
+void Baralho::imprimir(){
+ std::cout << "myvector contains:";
+	for (std::vector<Carta>::iterator it=cartas.begin(); it!=cartas.end(); ++it)
+		std::cout << ' ' << it->get_cor();
+
+  std::cout << '\n';
+
+}
+
+
+
+
 
     //popular: criar 108 cartas e add ao baralho loops
   //http://www.cplusplus.com/reference/algorithm/random_shuffle/
