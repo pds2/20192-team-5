@@ -1,17 +1,18 @@
 #ifndef CARTA_H
 #define CARTA_H
-#include <iostream>
+#include "classe_carta.h"
 
-class Carta{
+class Comprar2 : public Carta {
     
     private:
         int cor;
         int numero;
     
     public:
-        Carta(int _cor, int _numero);
+        Comprar2(int _cor, int _numero);
         int get_cor();    
         int get_numero();
-        virtual std::string acao();  
+        std::string acao() override;  
 };
+
 #endif

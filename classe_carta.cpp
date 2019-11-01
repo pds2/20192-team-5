@@ -1,4 +1,3 @@
-#include <iostream>
 #include "classe_carta.h"
 
 Carta::Carta(int _cor, int _numero){
@@ -15,5 +14,7 @@ int Carta::get_numero(){
     	return this->numero;
     }
 
-void Carta::acao(){;}
+std::string Carta::acao(){
+	return "proximo";
+}
     

@@ -1,8 +1,8 @@
-#ifndef CARTA_H
-#define CARTA_H
-#include <iostream>
+#ifndef CARTAREVERTER_H
+#define CARTAREVERTER_H
+#include "classe_carta.h"
 
-class Carta{
+class CartaReverter: public Carta{
     
     private:
         int cor;
@@ -12,6 +12,7 @@ class Carta{
         Carta(int _cor, int _numero);
         int get_cor();    
         int get_numero();
-        virtual std::string acao();  
+        virtual std::string acao();  // 
+    
 };
 #endif
