@@ -17,7 +17,7 @@ class Jogador{
 		std::vector<Carta> get_mao();
 		bool verificar_mao();
 		void gritar_uno();
-		//escolher_carta_mao();
+		int escolher_carta_mao();
 
 };
 #endif 

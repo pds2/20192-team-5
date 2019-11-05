@@ -1,15 +1,16 @@
-#ifndef CARTA_H
-#define CARTA_H
+#ifndef COMPRAR4_H
+#define COMPRAR4_H
 #include <iostream>
+#include <classe_carta.h>
 
-class Carta{
+class Comprar4 : public Carta{
     
     private:
         int cor;
-        int numero;
+        int numero;8
     
     public:
-        Carta(int _cor, int _numero);
+        Comprar4(int _cor, int _numero);
         int get_cor();    
         int get_numero();
         virtual std::string acao();  
