@@ -13,7 +13,7 @@
 
 class Baralho{
 private:
-    std::vector<Carta*> cartas;
+    std::vector<Carta*> cartas = {};
 public:
     //Baralho(){};
     std::vector<Carta*> retornarCartas();

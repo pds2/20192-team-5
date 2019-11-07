@@ -7,12 +7,14 @@
 class Jogador{
 private:
 	std::string nome;
-	std::vector<Carta*> mao;
+	std::vector<Carta*> mao = {};
+	bool Uno = false;
 public:
-	Jogador(std::string _nome, std::vector<Carta*> _cartasMao);
-	void imprimeMao();
-	std::string retornarNome();
-	std::vector<Carta*> retornarMao();
+	void set_name(std::string _nome);
+	std::string get_name();
+	void imprimirMao();
+	void Uno();
+
 };
 
 #endif 
