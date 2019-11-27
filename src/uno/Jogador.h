@@ -1,10 +1,10 @@
 #ifndef JOGADOR_H
 #define JOGADOR_H
-#include <vector>
 #include <string>
+#include <vector>
 
-#include "carta/Carta.h"
 #include "Mesa.h"
+#include "carta/Carta.h"
 
 using namespace carta;
 
@@ -16,12 +16,15 @@ class Jogador {
   bool gritouUno;
 
  public:
+  Jogador(std::string nome, Mesa* mesa);
   std::string getName();
+  std::string getNome();
   // Aguarda o input do jogador e retorna a carta da jogada
   Carta* proximoMovimento(Mesa* t);
-  void setNome(std::string _nome);
-  std::string getNome();
   bool getGritouUno();
+  void setNome(std::string _nome);
+  void imprimirMao();
+  ~Jogador();
 };
 }  // namespace uno
 

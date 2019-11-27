@@ -32,6 +32,8 @@ class Jogo {
   // índice do jogador atual no vetor `jogadores`
   int jogadorAtualIndex;
   Mesa* mesa;
+
+  void adicionarJogador();
  public:
   Jogo();
   void iniciar();

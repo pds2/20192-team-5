@@ -10,5 +10,17 @@ Jogo::Jogo() {
 }
 
 void Jogo::iniciar() {
-    std::cout << "Iniciando jogo!";
+    std::cout << "Iniciando jogo!\n";
+    this->adicionarJogador();
+    this->adicionarJogador();
+}
+
+void Jogo::adicionarJogador() {
+    std::string nome;
+    std::cout << "Digite o nome do jogador: \n";
+    std::cin >> nome;
+
+    this->jogadores.push_back(new Jogador(nome, this->mesa));
+
+    this->jogadores.back()->imprimirMao();
 }
