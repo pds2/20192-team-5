@@ -21,7 +21,7 @@ class Carta {
   Carta(int numero, Cor cor);
   int getNumero();
   Cor getCor();
-  const virtual std::string getAcao() = 0;
+  virtual std::string getAcao() = 0;
   ~Carta();
 };
 }  // namespace carta

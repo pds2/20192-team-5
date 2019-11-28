@@ -22,9 +22,10 @@ Mesa::Mesa() {
   Carta* primeiraCarta = this->comprarCarta();
   while (primeiraCarta->getAcao() != "") {
     this->pilhaDeCompra.push_back(primeiraCarta);
+    primeiraCarta = this->comprarCarta();
   }
 
-  this->pilhaDeDescarte.push_back(primeiraCarta);
+  this->descartar(primeiraCarta);
 }
 
 Carta* Mesa::comprarCarta() {
@@ -36,6 +37,39 @@ Carta* Mesa::comprarCarta() {
 void Mesa::embaralhar() {
   std::random_shuffle(this->pilhaDeCompra.begin(), this->pilhaDeCompra.end());
 }
+
+void Mesa::descartar(Carta* carta) {
+    if (carta->getAcao() != "") {
+        this->acaoAcumulada = this->acaoAcumulada + 1;
+    } if (carta->getCor() != Cor::CORINGA) {
+        this->proximaCorEsperada = carta->getCor();
+    }
+    
+    this->pilhaDeDescarte.push_back(carta);
+    this->setProximaCor(carta->getCor());
+}
+
+
+void Mesa::setProximaCor(Cor cor) {
+    this->proximaCorEsperada = cor;
+}
+
+Carta* Mesa::ultimaCartaJogada() {
+    return this->pilhaDeDescarte.back();
+}
+
+Cor Mesa::getProximaCor() {
+    return this->proximaCorEsperada;
+}
+
+void Mesa::resetAcaoAcumulada() {
+    this->acaoAcumulada = 0;
+}
+
+int Mesa::getAcaoAcumulado() {
+    return this->acaoAcumulada;
+}
+
 
 void Mesa::iniciar() {
   /**
@@ -84,7 +118,3 @@ void Mesa::iniciar() {
     this->pilhaDeCompra.push_back(new carta::Pular(-1, carta::AZUL));
   }
 }
-
-// popular: criar 108 cartas e add ao baralho loops
-// http://www.cplusplus.com/reference/algorithm/random_shuffle/
-// criar vetor vazio

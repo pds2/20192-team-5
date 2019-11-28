@@ -17,17 +17,23 @@ using namespace carta;
 namespace uno {
 class Mesa {
  private:
-  std::vector<Carta*> pilhaDeCompra = {};
-  std::vector<Carta*> pilhaDeDescarte = {};
+   int acaoAcumulada = 0;
+   std::vector<Carta *> pilhaDeCompra = {};
+   std::vector<Carta *> pilhaDeDescarte = {};
+   Cor proximaCorEsperada;
 
-  void iniciar();
-  void embaralhar();
+   void iniciar();
+   void embaralhar();
  public:
   Mesa();
+  int getAcaoAcumulado();
   Carta* ultimaCartaJogada();
+  Cor getProximaCor();
   // remove a carta da pilha de "compra" e retorna um ponteiro para ela
   Carta* comprarCarta();
   void descartar(Carta* card);
+  void setProximaCor(Cor cor);
+  void resetAcaoAcumulada();
   ~Mesa();
 };
 }

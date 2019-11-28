@@ -10,7 +10,7 @@ namespace carta {
 class Inverter : public Carta {
  public:
   Inverter(int, Cor);
-  const std::string getAcao() override { return "inverter"; }
+  std::string getAcao() override { return "inverter"; }
 };
 }  // namespace carta
 #endif
