@@ -6,14 +6,10 @@
 #include <string>
 #include <vector>
 
-// #include "../inventory/Stock.hpp"
-// #include "../user/Person.hpp"
 #include "Jogador.h"
 #include "Mesa.h"
 #include "carta/Carta.h"
 
-// using namespace std;
-// using namespace inventory;
 using namespace carta;
 
 namespace uno {
@@ -32,8 +28,11 @@ class Jogo {
   // índice do jogador atual no vetor `jogadores`
   int jogadorAtualIndex;
   Mesa* mesa;
+  bool alguemGanhou;
 
-  void adicionarJogador();
+  int getProximoJogadorIndex();
+  void adicionarJogador(std::string nome);
+  void iniciarRodada();
  public:
   Jogo();
   void iniciar();

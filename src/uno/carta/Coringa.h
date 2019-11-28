@@ -10,7 +10,7 @@ namespace carta {
 class Coringa : public Carta {
  public:
   Coringa(int, Cor);
-  const std::string getAcao() override { return "coringa"; }
+  std::string getAcao() override { return "coringa"; }
 };
 }  // namespace carta
 #endif

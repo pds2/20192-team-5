@@ -10,7 +10,7 @@ namespace carta {
 class Comprar2 : public Carta {
  public:
   Comprar2(int, Cor);
-  const std::string getAcao() override { return "comprar2"; }
+  std::string getAcao() override { return "comprar2"; }
 };
 }  // namespace carta
 #endif

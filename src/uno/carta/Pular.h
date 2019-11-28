@@ -10,7 +10,7 @@ namespace carta {
 class Pular : public Carta {
  public:
   Pular(int, Cor);
-  const std::string getAcao() override { return "pular"; }
+  std::string getAcao() override { return "pular"; }
 };
 }  // namespace carta
 #endif
