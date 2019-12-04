@@ -11,14 +11,12 @@ Jogo::Jogo() {
 }
 
 void Jogo::iniciar() {
-  std::cout << "Iniciando jogo!\n";
-
   std::string nome;
   std::cout << "Digite o nome do jogador 1: \n";
-  std::cin >> nome;
+  std::getline(std::cin >> std::ws, nome);
   this->adicionarJogador(nome);
   std::cout << "Digite o nome do jogador 2: \n";
-  std::cin >> nome;
+  std::getline(std::cin >> std::ws, nome);
   this->adicionarJogador(nome);
 
   while (this->alguemGanhou != true) {
@@ -59,5 +57,4 @@ int Jogo::getProximoJogadorIndex() {
 
 void Jogo::adicionarJogador(std::string nome) {
   this->jogadores.push_back(new Jogador(nome, this->mesa));
-  this->jogadores.back()->imprimirMao();
 }

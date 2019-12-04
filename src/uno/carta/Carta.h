@@ -24,5 +24,7 @@ class Carta {
   virtual std::string getAcao() = 0;
   ~Carta();
 };
+
+std::string corParaString(carta::Cor c);
 }  // namespace carta
 #endif
