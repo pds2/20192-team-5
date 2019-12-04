@@ -1,14 +1,14 @@
-#include <iostream>
 #include <algorithm>
-#include <ctime>
 #include <cstdlib>
-// #include "baralho.h"
-#include <vector>
-// #include "jogador.h"
+#include <ctime>
+#include <iostream>
 #include <string>
+#include <vector>
+
 #include "uno/Jogo.h"
 
 int main() {
-	uno::Jogo* jogo = new uno::Jogo();
-	jogo->iniciar();
+  std::cout << "Iniciando jogo...\n";
+  uno::Jogo* jogo = new uno::Jogo();
+  jogo->iniciar();
 }

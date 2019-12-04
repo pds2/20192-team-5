@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <cstdlib>
 #include <ctime>
+#include <random>
 #include <vector>
 
 #include "carta/Carta.h"
@@ -22,6 +23,7 @@ Mesa::Mesa() {
   Carta* primeiraCarta = this->comprarCarta();
   while (primeiraCarta->getAcao() != "") {
     this->pilhaDeCompra.push_back(primeiraCarta);
+    this->embaralhar();
     primeiraCarta = this->comprarCarta();
   }
 
@@ -35,41 +37,41 @@ Carta* Mesa::comprarCarta() {
 }
 
 void Mesa::embaralhar() {
+  std::srand(unsigned(std::time(0)));
   std::random_shuffle(this->pilhaDeCompra.begin(), this->pilhaDeCompra.end());
 }
 
 void Mesa::descartar(Carta* carta) {
-    if (carta->getAcao() != "") {
-        this->acaoAcumulada = this->acaoAcumulada + 1;
-    } if (carta->getCor() != Cor::CORINGA) {
-        this->proximaCorEsperada = carta->getCor();
-    }
-    
-    this->pilhaDeDescarte.push_back(carta);
-    this->setProximaCor(carta->getCor());
+  if (carta->getAcao() != "") {
+    this->acaoAcumulada = this->acaoAcumulada + 1;
+  }
+  if (carta->getCor() != Cor::CORINGA) {
+    this->proximaCorEsperada = carta->getCor();
+  }
+
+  this->pilhaDeDescarte.push_back(carta);
+  this->setProximaCor(carta->getCor());
 }
 
-
 void Mesa::setProximaCor(Cor cor) {
-    this->proximaCorEsperada = cor;
+  this->proximaCorEsperada = cor;
 }
 
 Carta* Mesa::ultimaCartaJogada() {
-    return this->pilhaDeDescarte.back();
+  return this->pilhaDeDescarte.back();
 }
 
 Cor Mesa::getProximaCor() {
-    return this->proximaCorEsperada;
+  return this->proximaCorEsperada;
 }
 
 void Mesa::resetAcaoAcumulada() {
-    this->acaoAcumulada = 0;
+  this->acaoAcumulada = 0;
 }
 
 int Mesa::getAcaoAcumulado() {
-    return this->acaoAcumulada;
+  return this->acaoAcumulada;
 }
-
 
 void Mesa::iniciar() {
   /**

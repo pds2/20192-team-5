@@ -1,6 +1,6 @@
 # UNO
 
-O projeto escolhido pelo grupo para o trabalho prático foi o jogo de cartas Uno, feito em c++.
+O projeto escolhido pelo grupo para o trabalho prático foi o jogo de cartas Uno, feito em C++.
 
 ## Executando o projeto
 ```sh
@@ -9,6 +9,12 @@ make all
 
 # rodando o jogo
 make run
+
+# compilando os testes
+make tests
+
+# rodando os testes
+make run-tests
 ```
 
 ## Sobre o jogo
