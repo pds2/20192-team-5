@@ -29,18 +29,18 @@ Como funciona o Jogo:
 Primeiro voce deve escolher o nome para o jogador um e suas cartas serão impressas na tela.
 
 ![inicio do jogo]
-(/imagens/Inicio do jogo.jpg)
+(/doc/Inicio do jogo.jpg)
 
 
 No jogo a mão do jogador é impressa na tela aparecendo a cor da carta, número e a ação(caso nao tenha cor).
 
 ![mao do jogador um  que é impressa na tela]
-(/imagens/mao jogador.jpg)
+(/doc/mao jogador.jpg)
 
 Assim o jogador escolhe o número da carta que ele quer jogar. Caso essa carta possa ser jogada o jogo continua com o próximo jogador. Caso contrário, é enviada uma mensagem de jogada inválida e o jogador atual deve jogar novamente. 
 
 ![jogador dois entra com uma opção de carta inválida]
-(/imagens/jogada invalida.jpg)
+(/doc/jogada invalida.jpg)
 
 O jogo continua até que um dos jogadores chega a zero cartas. Nesse caso, aquele que ficar com zero cartas é o vencedor!
 
