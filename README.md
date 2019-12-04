@@ -1,9 +1,17 @@
-# 20192-team-5
-
-
-## UNO:
+# UNO
 
 O projeto escolhido pelo grupo para o trabalho prático foi o jogo de cartas Uno, feito em c++.
+
+## Executando o projeto
+```sh
+# compilando o código do projeto
+make all
+
+# rodando o jogo
+make run
+```
+
+## Sobre o jogo
 
 
 **Regras do UNO**:
