@@ -32,16 +32,16 @@ Há a classe jogo que regula o "estado" do sistema (nela é armazenado os pontei
 
 Primeiro voce deve escolher o nome para o jogador um e suas cartas serão impressas na tela.
 
-![inicio do jogo](/doc/Inicio do jogo.jpg?raw=true)
+![inicio do jogo](https://drive.google.com/open?id=1Dkej8rE5TJ0pBG2lEFPKpyn2-Gvy2oFi)
 
 
 No jogo a mão do jogador é impressa na tela aparecendo a cor da carta, número e a ação(caso nao tenha cor).
 
-![mao do jogador um  que é impressa na tela](/doc/mao jogador.jpg)
+![mao do jogador um  que é impressa na tela](https://drive.google.com/open?id=1u8MLGotxgMK4AWV7zng2e9S5HpcCuWcv
 
 Assim o jogador escolhe o número da carta que ele quer jogar. Caso essa carta possa ser jogada o jogo continua com o próximo jogador. Caso contrário, é enviada uma mensagem de jogada inválida e o jogador atual deve jogar novamente. 
 
-![jogador dois entra com uma opção de carta inválida](/doc/jogada invalida.jpg)
+![jogador dois entra com uma opção de carta inválida](https://drive.google.com/open?id=1up-CoSzwEwmNteigc79ikPRLDpW_NJME)
 
 O jogo continua até que um dos jogadores chega a zero cartas. Nesse caso, aquele que ficar com zero cartas é o vencedor!
 
