@@ -8,3 +8,4 @@
 
 ### Outras modificações
 - [x] Implementação de testes de unidade
+- [x] Melhorias nos tratamentos de input (programação defensiva)
