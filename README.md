@@ -1,11 +1,13 @@
 # 20192-team-5
 
 
-UNO:
+## UNO:
+
 O projeto escolhido pelo grupo para o trabalho prático foi o jogo de cartas Uno, feito em c++.
 
 
-Regras do UNO:
+**Regras do UNO**:
+
 Foi criado o Jogo Uno em c++ com dois jogadores. Cada jogador começa com sete cartas, e elas são distribuídas com a face para baixo. O restante das cartas são colocadas em uma pilha  com a face para baixo chamada baralho. Ao lado da pilha, há um espaço designado para uma outra pilha chamada de descarte. A carta do topo deve ser colocada na pilha de descarte e o jogo começa!
 
 O jogo possui 108 cartas divididas em 4 cores : Amarelo, Vermelho, Verde e Azul de 0 a 9. Além disso, há  as carts especiais que não tem cor e possuem uma ação, por exemplo, "coringa Comprar4".
@@ -18,18 +20,20 @@ Se essa carta puder ser jogada, jogue-a. Caso contrário, mantenha a carta e o j
 
 Se a primeira carta exibida na pilha de empate (para formar a pilha de descarte) for uma carta de ação, a ação dessa carta se aplica e deve ser executada pelo primeiro jogador a sair (conforme indicado, geralmente é o jogador para a pilha). revendedor esquerdo). 
 
-Estrutura do jogo:
+**Estrutura do jogo:**
+
 Para fazer o projeto do jogo criamos uma classe base chamada Carta que possui atributos Cor e Numero. Essa carta possuia uma funcao virtual que seria sobrescrita de acordo com a acao das seguintes cartas.  Depois criamos uma classe para cada tipo de carta especial que herdou as caracteristicas da carta mãe e possuem um polimorfismo na funcao. 
 
 Há também as classses jogador que seram os participantes do jogo, a classe mesa que é onde fica os baralhos e as ações de troca entre carta da mao, baralho e descarte.
 
 Há a classe jogo que regula o "estado" do sistema (nela é armazenado os ponteiros para cada jogador, baralho, pilha de descarte. 
 
-Como funciona o Jogo:
+**Como funciona o Jogo:**
+
 Primeiro voce deve escolher o nome para o jogador um e suas cartas serão impressas na tela.
 
 ![inicio do jogo]
-(/doc/Inicio do jogo.jpg)
+(doc/Inicio do jogo.jpg)
 
 
 No jogo a mão do jogador é impressa na tela aparecendo a cor da carta, número e a ação(caso nao tenha cor).
